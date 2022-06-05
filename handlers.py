@@ -11,7 +11,7 @@ async def start(update: Update, context: CallbackContext) -> None:
     user = update.effective_user
     await user.send_message(
         f"Hi {user.full_name}!\n\n"
-        f"I am a bot that recognizes faces in photos"
+        f"I am a bot that recognizes faces in photos\n"
         f"To start send me any photo"
     )
 
