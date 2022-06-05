@@ -1,12 +1,10 @@
 import cv2
-import deepface
 import numpy as np
 
 from io import BytesIO
 from typing import List
-
-from deepface.detectors import FaceDetector
 from telegram import InputMediaPhoto
+from deepface.detectors import FaceDetector
 
 MODEL_NAME = 'retinaface'
 DETECTOR = FaceDetector.build_model(MODEL_NAME)

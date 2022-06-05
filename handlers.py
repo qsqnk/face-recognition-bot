@@ -2,7 +2,6 @@ from io import BytesIO
 
 from telegram import Update
 from telegram.ext import CallbackContext
-
 from recognition import recognize_faces
 
 
