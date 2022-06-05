@@ -23,6 +23,10 @@ def main() -> None:
             command='start',
             callback=start
         ),
+        CommandHandler(
+            command='joke',
+            callback=send_joke
+        ),
         MessageHandler(
             filters=filters.PHOTO,
             callback=send_faces
