@@ -15,9 +15,14 @@ def recognize_faces(input_stream: BytesIO) -> List[InputMediaPhoto]:
         np.frombuffer(input_stream.read(), np.uint8), -1
     )
 
-    _, regions = zip(
-        *FaceDetector.detect_faces(DETECTOR, MODEL_NAME, image)
+    detection_result = FaceDetector.detect_faces(
+        DETECTOR, MODEL_NAME, image
     )
+
+    if not detection_result:
+        return []
+
+    _, regions = zip(*detection_result)
 
     faces = []
 
